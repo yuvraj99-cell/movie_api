@@ -10,7 +10,7 @@ const userRouter=require('./routes/userRoutes')
 // db Connection 
 
 
-
+const URL='mongodb+srv://yyyuvraj11:Yuvraj123@cluster0.xdqosbi.mongodb.net/?retryWrites=true&w=majority'
 
 main().catch(err => console.log(err,"error showing"));
 
@@ -42,7 +42,7 @@ server.use('/users',userRouter.router);
 
 
 
-server.listen(process.env.PORT||8080,()=>{
+server.listen(process.env.URL||8080,()=>{
     console.log('Server started')
 });
 
